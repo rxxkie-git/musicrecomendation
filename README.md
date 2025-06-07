@@ -1,4 +1,3 @@
-# musicrecomendation
 # Music Recommender 🎵
 
 Welcome to the **Music Recommender** — a fun and interactive C++ console application that suggests songs based on your mood or favorite track!
@@ -104,11 +103,10 @@ Here are some songs to match your chill mood:
 
 ```
 📁 music-recommender/
-├── main.cpp
+├── musicrecomendation.cpp
 ├── top_250_songs_with_rank.cpp
 └── README.md
 ```
 
-## 👩‍💻 Author
-
-* **\Srinand**
+**📝 Author**: Srinand  
+**📅 Last Updated**: June 2025
