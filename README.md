@@ -19,20 +19,8 @@ Welcome to the **Music Recommender** — a fun and interactive C++ console appli
 
 ### Files Included
 
-* `main.cpp` — The core application code
-* `top_250_songs_with_rank.cpp` — The list of top songs (included in `main.cpp`)
-
-### Compilation
-
-```bash
-g++ -std=c++11 main.cpp -o recommender
-```
-
-### Run
-
-```bash
-./recommender
-```
+* `musicrecomendation.cpp` — The core application code
+* `top_250_songs_with_rank.cpp` — The list of top songs (included in `musicrecomendation.cpp`)
 
 ## 🎭 How It Works
 
