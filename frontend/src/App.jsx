@@ -41,9 +41,7 @@ function App() {
 
   // Chart refs for GFG ML Insights
   const similarityChartRef = useRef(null);
-  const genreChartRef = useRef(null);
   const similarityChartInst = useRef(null);
-  const genreChartInst = useRef(null);
 
   // Check Spotify API connection status on load
   useEffect(() => {
@@ -112,7 +110,6 @@ function App() {
 
     // Destroy existing charts to prevent memory leaks and overlapping canvas bugs
     if (similarityChartInst.current) similarityChartInst.current.destroy();
-    if (genreChartInst.current) genreChartInst.current.destroy();
 
     try {
       // 1. Render Cosine Similarity Chart
@@ -160,51 +157,12 @@ function App() {
         }
       });
 
-      // 2. Render Genre Distribution Chart
-      const ctxGenre = genreChartRef.current.getContext('2d');
-
-      const genreCounts = {};
-      recommendations.forEach(r => {
-        const g = r.genre || 'Other';
-        genreCounts[g] = (genreCounts[g] || 0) + 1;
-      });
-
-      genreChartInst.current = new window.Chart(ctxGenre, {
-        type: 'doughnut',
-        data: {
-          labels: Object.keys(genreCounts),
-          datasets: [{
-            data: Object.values(genreCounts),
-            backgroundColor: [
-              'rgba(6, 182, 212, 0.65)',
-              'rgba(139, 92, 246, 0.65)',
-              'rgba(236, 72, 153, 0.65)',
-              'rgba(245, 158, 11, 0.65)',
-              'rgba(16, 185, 129, 0.65)',
-              'rgba(239, 68, 68, 0.65)'
-            ],
-            borderColor: 'rgba(10, 10, 10, 0.95)',
-            borderWidth: 2
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              position: 'bottom',
-              labels: { color: 'rgba(255, 255, 255, 0.7)', font: { family: 'Outfit', size: 10 } }
-            }
-          }
-        }
-      });
     } catch (err) {
       console.error("Error creating Chart.js charts:", err);
     }
 
     return () => {
       if (similarityChartInst.current) similarityChartInst.current.destroy();
-      if (genreChartInst.current) genreChartInst.current.destroy();
     };
   }, [resultsActive, recommendations]);
 
@@ -747,13 +705,6 @@ function App() {
                   </div>
                 </div>
 
-                {/* Genre distribution chart */}
-                <div className="ml-insights-bubble">
-                  <h3>🎵 Recommendation Genre Distribution</h3>
-                  <div className="chart-container" style={{ height: '220px', position: 'relative', marginTop: '10px' }}>
-                    <canvas ref={genreChartRef}></canvas>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
