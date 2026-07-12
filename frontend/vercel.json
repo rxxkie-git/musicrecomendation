@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://music-recomendation-backend.onrender.com/api/:path*"
+    }
+  ]
+}
