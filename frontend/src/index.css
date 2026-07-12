@@ -711,6 +711,14 @@ footer {
     gap: 25px;
     margin-top: 15px;
     text-align: left;
+    align-items: start; /* Prevents grid columns from stretching vertically */
+}
+
+@media (min-width: 1200px) {
+    .results-layout-grid {
+        grid-template-columns: 720px 420px;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {
