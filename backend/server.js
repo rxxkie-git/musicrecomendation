@@ -251,8 +251,8 @@ app.post('/api/reset', async (req, res) => {
 });
 
 // Start backend server
-app.listen(PORT, '127.0.0.1', () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`======================================================================`);
-    console.log(`Spotifind Node.js Backend Server running on http://127.0.0.1:${PORT}`);
+    console.log(`Spotifind Node.js Backend Server running on http://0.0.0.0:${PORT}`);
     console.log(`======================================================================`);
 });
