@@ -66,4 +66,3 @@ You need to run both the backend and the frontend servers simultaneously.
 
 **📝 Author**: Srinand  
 **📅 Last Updated**: July 2026
-
