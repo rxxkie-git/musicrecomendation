@@ -451,7 +451,7 @@ function App() {
               <circle cx="50" cy="48" r="4" fill="#ffffff" stroke="#06b6d4" strokeWidth="2" />
               <circle cx="68" cy="40" r="3.5" fill="#22d3ee" />
             </svg>
-            <h1>Spotifind</h1>
+            <h1>Spootifind</h1>
             <span className={`status-badge ${onlineStatus}`}>
               {onlineStatus === 'loading' ? 'Checking status...' : onlineStatus === 'online' ? 'Spotify API Online' : 'Offline Demo Mode'}
             </span>
@@ -475,7 +475,7 @@ function App() {
 
       {/* Subtitle / Intro */}
       <div className="hero-section">
-        <p className="subtitle">Discover your next favorite track using Spotifind</p>
+        <p className="subtitle">Discover your next favorite track using Spootifind</p>
       </div>
 
       {/* Main Dashboard Panel */}
@@ -761,7 +761,7 @@ function App() {
       </main>
 
       <footer>
-        <p>Spotifind • Powered by React & Node.js • Created by Srinand</p>
+        <p>Spootifind • Powered by React & Node.js • Created by Srinand</p>
       </footer>
     </div>
   );

@@ -1,7 +1,7 @@
 {
   "name": "spotifind-backend",
   "version": "1.0.0",
-  "description": "Backend API server for Spotifind Recommender",
+  "description": "Backend API server for Spootifind Recommender",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
